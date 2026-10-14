@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f3f0e9">
+  <meta name="description" content="Explore a photo-inspired bent plywood swivel chair in interactive 3D. Rotate, zoom, and download the model.">
+  <title>Bentwood chair — a study in 3D</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%232f4439'/%3E%3Cpath d='M44 12v25H19m13 0v16m-14 0h28' fill='none' stroke='%23e9c899' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="assets/model-viewer.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header><a class="brand" href="./" aria-label="Chair study home"><span class="brand-mark">c.</span> OBJECT STUDIES</a><span class="edition">No. 001 <span>/</span> Bentwood</span></header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <div class="eyebrow"><span></span> FROM PHOTOGRAPH TO FORM</div>
+      <h1 id="title">One curve.<br>A whole chair.</h1>
+      <p class="description">A familiar wooden swivel chair, rebuilt in three dimensions. Explore the flowing plywood shell, satin metal base, and small details that hold it all together.</p>
+      <a class="download" href="assets/wooden-chair.glb" download>Download 3D model <span aria-hidden="true">↗</span></a>
+      <p class="file-note">GLB format · ready for your 3D tools</p>
+      <dl class="specs"><div><dt>01 / SHELL</dt><dd>Bent plywood</dd></div><div><dt>02 / BASE</dt><dd>Five-point swivel</dd></div><div><dt>03 / FINISH</dt><dd>Natural wood & metal</dd></div></dl>
+    </section>
+    <section class="stage" aria-label="Interactive chair model">
+      <div class="stage-heading"><span>THE OBJECT / 360°</span><span class="live"><i></i> INTERACTIVE 3D</span></div>
+      <model-viewer id="chair" src="assets/wooden-chair.glb" poster="assets/chair-preview.png" alt="A natural bent plywood chair with an oval handle, silver pedestal and five twin-wheel casters" camera-controls touch-action="pan-y" camera-orbit="32deg 72deg 2.6m" camera-target="0m 0.51m 0m" min-camera-orbit="auto 10deg 0.7m" max-camera-orbit="auto 100deg 3.5m" shadow-intensity="1" shadow-softness="1" exposure="1" environment-image="neutral" interaction-prompt="none" loading="eager" reveal="auto">
+        <div slot="progress-bar" class="loading" id="loading" role="status">Preparing your 3D view…</div>
+      </model-viewer>
+      <p id="viewer-error" class="error" role="alert" hidden>The interactive view couldn’t load. You can still <a href="assets/chair-preview.png">view the render</a> or download the model.</p>
+      <div class="viewer-bottom"><p id="hint">Drag to rotate <span>·</span> Scroll or pinch to zoom</p><div class="controls"><button id="rotate" type="button" aria-pressed="false">↻ <span>Auto rotate</span></button><button id="reset" type="button">⟲ <span>Reset view</span></button></div></div>
+    </section>
+  </main>
+  <footer><p>A photo-inspired reconstruction, made in Blender.</p><p>Approx. 102 cm tall <span>·</span> Dimensions estimated from a single photograph.</p><a href="https://github.com/tomasvicar/wooden-chair-3d" target="_blank" rel="noopener">View on GitHub ↗</a></footer>
+</body>
+</html>
